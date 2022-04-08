@@ -1,3 +1,3 @@
-import {sum} from './modules/test.js';
+// import {sum} from './modules/test.js';
 
-document.write(sum(3,6))
+// document.write(sum(3,6))
