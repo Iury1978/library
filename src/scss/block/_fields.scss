@@ -5,6 +5,9 @@
   &__block {
     position: relative;
     z-index: 3;
+    @include laptop {
+      min-width: 142px;
+    }
   }
 
   &__btn {
@@ -17,18 +20,22 @@
     background-color: transparent;
     color: $light;
     border: 0;
-    transition: color .36s ease-in-out ;
+    transition: color 0.36s ease-in-out;
     &:hover {
       color: $primary;
     }
+    @include laptop {
+      font-size: 14px;
+      width: 100%;
+    }
   }
-
 
   &__list {
     display: none;
     position: absolute;
     top: calc(100% + 3px);
     background-color: $light;
+    min-width: 100%;
     color: $dark;
     padding: 15px;
     white-space: nowrap;
@@ -36,7 +43,9 @@
     // width: max-content;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
-
+    @include laptop {
+      top: calc(100% + 20px);
+    }
     &_active {
       display: block;
     }
@@ -51,6 +60,9 @@
       right: 0;
       @media (max-width: 375px) {
         right: -8px;
+      }
+      @include laptop {
+        display: block;
       }
     }
   }
@@ -70,5 +82,7 @@
     border-radius: 16px;
     border: 0px;
     padding: 8px;
+    font-size: 12px;
+    line-height: 100%;
   }
 }

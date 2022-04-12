@@ -1,5 +1,11 @@
 .header {
   padding: 8px 0;
+  @include tablet {
+    padding: 20px 15px;
+  }
+  @include desktop {
+    padding: 30px 25px;
+  }
 
   &__container {
     display: flex;
@@ -11,11 +17,32 @@
     // что бы не прыгала высота при верстке( что бы не переверстывать при изменении лого)
     // что бы заказчик мог сам исправить можно прописать в хтмл все размеры
     height: 40px;
+    // этим мы отталкиваем максмально кноку добавить книгу,
+    // что бы потом ее отттолкнуть на 118 от поиска
+    margin-right: auto;
+
+    @include laptop {
+      height: 66px;
+    }
   }
 
   &__btn-add {
     // изначально  (на мобильноей версии) этой кнопки нет. скрываю ее. она появляется в хедере на десктопе потому что
     display: none;
+
+    @include laptop {
+      display: block;
+      height: 50px;
+      width: 320px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      color: $light;
+      border: 0;
+      border-radius: 8px;
+      background: $primary;
+      margin-right: 102px;
+    }
   }
 
   &__btn {
@@ -27,10 +54,17 @@
     background-repeat: no-repeat;
     background-color: transparent;
     border: 0;
-    background-position: center right;
+    background-position: right;
   }
 
   &__btn_search {
     background-image: url("../img/search.svg");
+  }
+  &__btn_delete {
+    background-image: url("../img/delete.svg");
+  }
+  &__btn_back {
+    background-image: url("../img/back.svg");
+    background-position: left;
   }
 }

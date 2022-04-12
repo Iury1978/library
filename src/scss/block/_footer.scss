@@ -3,10 +3,12 @@
   bottom: 0;
   width: 100%;
   display: flex;
+  right: 0;
   justify-content: center;
   align-items: center;
   height: 74px;
   background-color: $dark;
+  padding: 0 20px;
 //  это вне макета сделано. что бы на маленьких экранах лучше смотрелось
 @media (max-height: 500px) {
   width: auto;
