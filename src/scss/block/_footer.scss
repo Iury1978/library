@@ -1,0 +1,19 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 74px;
+  background-color: $dark;
+//  это вне макета сделано. что бы на маленьких экранах лучше смотрелось
+@media (max-height: 500px) {
+  width: auto;
+  justify-content: flex-end ;
+  padding: 20px;
+  right: 0;
+  background-color: transparent;
+  
+}
+}

@@ -1,0 +1,36 @@
+.header {
+  padding: 8px 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    // что бы не прыгала высота при верстке( что бы не переверстывать при изменении лого)
+    // что бы заказчик мог сам исправить можно прописать в хтмл все размеры
+    height: 40px;
+  }
+
+  &__btn-add {
+    // изначально  (на мобильноей версии) этой кнопки нет. скрываю ее. она появляется в хедере на десктопе потому что
+    display: none;
+  }
+
+  &__btn {
+    //  ля лучшего уравления в мобильной версии  бы будем занимать все пространство, как и логотип,
+    // что бы пальцем проще попасть было, но картинку оставим нормального размера, только с отступами
+    width: 40px;
+    height: 40px;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: 0;
+    background-position: center right;
+  }
+
+  &__btn_search {
+    background-image: url("../img/search.svg");
+  }
+}

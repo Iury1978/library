@@ -1,0 +1,106 @@
+html {
+  position: relative;
+  box-sizing: border-box;
+  min-width: 320px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Montserrat, sans-serif;
+  /* указать шрифт под проект*/
+  // в этом проекте всё в разнобой и не указываем по умолчанию ( нет основного)
+  // font-size: 16px;
+  // font-weight: 400;
+  color: $light; /*цвет под ваш проект*/
+  background-color: $dark; /*цвет под ваш проект*/
+  background-image: url(../img/fire.svg);
+  background-size: cover;
+  background-position: center top 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  // line-height: 1.3;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+fieldset {
+  margin: 0;
+}
+
+// iframe {
+//   border: none;
+// }
+
+/*
+Доступно скрываю элементы
+*/
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px ;
+  overflow: hidden;
+}
+
+/*
+Пример контейнера
+Если контейнер 1080px по макету,
+то для max-width прибавляем паддинги 30px*2, 
+в итоге 1240px
+Чтобы контент не прижимался к краям экрана
+*/
+// в этом проекте смотрим по десктопу контейнер - 1060. на мобильном самом мелком отступы 20. добавляем их и получаем 1100
+
+.container {
+  max-width: 1100px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/*
+У секции добавляю вертикальные паддинги,
+это половина от расстояния между блоками
+*/
+
+.hidden {
+  display: none;
+}
+// это сделано для того, что бы можно было немного скроллить и был виден нижний контент
+section {
+  padding-bottom: 80px;
+}
