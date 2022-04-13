@@ -1,0 +1,22 @@
+.upload {
+  max-width: 222px;
+  margin: 0 auto 15px;
+
+  &__preview {
+    display: none;
+  }
+
+  &__file {
+    display: none;
+  }
+  &__label {
+    // делаю блочным, что бы задавать размеры мог
+    display: block;
+    width: 222px;
+    height: 290px;
+    background-image: url(../img/upload.jpg);
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+}
